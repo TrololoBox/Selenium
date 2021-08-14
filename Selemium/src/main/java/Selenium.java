@@ -90,7 +90,7 @@ public class Selenium {
                             break;
                         }
                     }
-                Thread.sleep(3000);
+                Thread.sleep(3000); //Pause for giving Driver to Load the page. Without this Pause code run and not see full site code.
 
                 List<WebElement> courses = driver.findElements((By.className("multiline")));
                 int counter = 0;
@@ -104,7 +104,7 @@ public class Selenium {
 
                 choiseCheck(courses);
 
-                Thread.sleep(3000);
+                Thread.sleep(3000); //Pause for giving Driver to Load the page. Without this Pause code run and not see full site code.
 
                 WebElement dropMenuOpen = driver.findElement(By.className("action-menu-trigger")).findElement(By.className("dropdown"));
                 dropMenuOpen.click();
@@ -118,9 +118,7 @@ public class Selenium {
                 }
     }
 
-    public static void loginCheck(ChromeDriver driver){
-        System.out.println("ERROR ERROR ERROR");
-    }
+  
 
     public static void choiseCheck(List<WebElement> courses)
     {
